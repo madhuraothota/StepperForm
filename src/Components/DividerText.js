@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, Divider } from '@mui/material';
+import { styled, Divider,Typography } from '@mui/material';
 
 
 
@@ -21,7 +21,7 @@ const DividerText = () => {
   return (
     <Root>
       {content}
-      <Divider><h6><b>Our Programs to Refer and Earn</b></h6></Divider>
+      <Divider><Typography><b>Our Programs to Refer & Earn</b></Typography></Divider>
 
     </Root>
   );

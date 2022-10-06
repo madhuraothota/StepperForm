@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header';
-import ReferEarn from './Components/ReferEarn';
+import ReferalEarn from './Components/ReferalEarn';
 import DividerText from './Components/DividerText';
 import Programs from './Components/Programs';
 import SelectProgram from './Components/SelectProgram';
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <ReferEarn />
+        <ReferalEarn/>
         <DividerText />
         <Programs />
         <SelectProgram />

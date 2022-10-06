@@ -9,8 +9,7 @@ const Footer = () => {
                 <div class="container">
                     <div class="row">
                         <div class="col l4 s4">
-                            <h5 class="white-text">Footer Content</h5>
-                            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                           <img  src='../images/logo.png'/>
                         </div>
                         <div class="col l2  s2">
                             <h5 class="white-text">PAGES</h5>
