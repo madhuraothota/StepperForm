@@ -4,6 +4,7 @@ import ReferalEarn from './Components/ReferalEarn';
 import DividerText from './Components/DividerText';
 import Programs from './Components/Programs';
 import SelectProgram from './Components/SelectProgram';
+import Jsonform from './Components/json-form';
 import DividerOr from './Components/DividerOr';
 import ReferalStatus from './Components/ReferalStatus';
 import Footer from './Components/Footer';
@@ -21,7 +22,7 @@ class App extends Component {
         <ReferalEarn/>
         <DividerText />
         <Programs />
-        <SelectProgram />
+        <SelectProgram />      
         <DividerOr/>
         <ReferalStatus />
         <Footer />

@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import { Box, Container,Grid, InputLabel, MenuItem, FormControl,Paper, Select, Typography } from '@mui/material';
 import ReferalForm from './ReferalForm';
 import './SelectProgram.css';
+import Jsonform from './json-form';
 
 const SelectProgram = () => {
   const [program, setProgram] = useState('');
@@ -52,15 +53,15 @@ const SelectProgram = () => {
           </FormControl>
           
           {
-            showhide === 10 && true ? <ReferalForm /> : " "
+            showhide === 10 && true ? <Jsonform/> : " "
 
           }
           {
-            showhide === 20 && true ? <ReferalForm /> : " "
+            showhide === 20 && true ? <Jsonform /> : " "
 
           }
           {
-            showhide === 30 && true ? <ReferalForm /> : " "
+            showhide === 30 && true ? <Jsonform/> : " "
 
           }
           </Item>
