@@ -19,13 +19,13 @@ const ReferalStatus = () => {
     return (
         <Box sx={{ flexGrow: 1, m:4}}>
             <Grid container spacing={2}>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <ReferalEntries/>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <SignUp/>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <Registrations/>
                 </Grid>
             </Grid>

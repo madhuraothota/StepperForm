@@ -1,22 +1,98 @@
-import React from 'react';
-import './ContactForm.css';
-import Data from './src/data.json';
+import React, { useState } from "react";
+import { Box, Button, TextField } from '@mui/material';
+import Promo from "./Promo";
 
-const ContactForm = () => {
+const ContactForm = ({ addReferalProp }) => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+
+    const changeName = (e) => {
+        setName(e.target.value);
+    }
+
+    const changeEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const changePhone = (e) => {
+        setPhone(e.target.value);
+
+    }
+
+    const addReferal = _ => {
+        addReferalProp({
+
+            id: (new Date).getTime(),
+            name, email, phone
+
+        })
+
+        setName('');
+        setEmail('');
+        setPhone('');
+    }
+
+   const  handleSubmit = e =>{
+        e.preventDefault();
+        console.log(e);
+    }
+
     return (
-        <div className='App'>
-        <div className='Posts' key={Data.id}>
-            {Data.map( post => {
-                return (
-                    <>
-                    <p>{post.name}</p>
-                    <p>{post.email}</p>
-                    <p>{post.phonenumber}</p>
-                    </>
-                )
-            })}
-        </div>
-        </div>
+        <form onSubmit={handleSubmit}>
+        <Box
+            margin="auto"
+            padding={5}
+            
+        >
+            <TextField
+                margin="normal"
+                type={'text'}
+                placeholder="Enter Friend Name"
+                variant="outlined"
+                value={name}
+                onChange={changeName}
+            >
+            </TextField>
+            <TextField
+                margin="normal"
+                type={'email'}
+                placeholder="Enter Friend Email"
+                variant="outlined"
+                value={email}
+                onChange={changeEmail}
+            >
+            </TextField>
+            <TextField
+                margin="normal"
+                type={'number'}
+                placeholder="Enter Phone Number"
+                variant="outlined"
+                value={phone}
+                onChange={changePhone}
+
+            >
+            </TextField>
+            <Button
+                margin="normal"
+                variant="contained"
+                type="submit"
+                onClick={addReferal}
+            >+ Add friend</Button>
+            </Box>
+              <Promo/>
+              <Button
+                margin="normal"
+                variant="contained"
+                type="submit"
+            >Submit</Button>
+            
+        
+        </form>
+     
+
+
+
     )
 }
 

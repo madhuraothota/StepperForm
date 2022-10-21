@@ -1,5 +1,5 @@
 import  React,{useState} from 'react';
-import { styled, alpha, AppBar, Box, Toolbar, IconButton, Typography, InputBase, InputLabel, Badge, MenuItem, Menu, Link, FormControl, Select } from '@mui/material';
+import { Avatar,styled, alpha, AppBar, Box, Toolbar, IconButton, Typography, InputBase, InputLabel, Badge, MenuItem, Menu, Link, FormControl, Select } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -86,12 +86,12 @@ const Header = () => {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="error">
+              <Badge badgeContent={0} color="error">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
             <IconButton size="large" aria-label="show products list" color="inherit">
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={0} color="error">
                 <ShoppingCartOutlinedIcon />
               </Badge>
             </IconButton>

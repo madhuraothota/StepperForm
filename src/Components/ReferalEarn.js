@@ -35,6 +35,8 @@ const MyReferalButton = styled(Button)({
 
 
 const ReferalEarn = () => {
+
+    
     return (
         <Paper
             sx={{
@@ -59,8 +61,8 @@ const ReferalEarn = () => {
                         </Grid>
                     </Grid>
                     <Grid item>
-                        <MyReferalButton variant="contained" disableRipple>
-                            My Referals
+                        <MyReferalButton variant="contained" disableRipple>                       
+                            My Referals                           
                         </MyReferalButton>
 
                     </Grid>

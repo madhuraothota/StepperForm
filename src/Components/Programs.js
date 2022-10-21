@@ -4,6 +4,7 @@ import ProgramFS from "./ProgramFS";
 import ProgramBS from "./ProgramBS";
 import ProgramDM from "./ProgramDM";
 import { styled } from '@mui/material/styles';
+import './Programs.css';
 
 
 
@@ -17,15 +18,15 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Programs = () => {
     return (
-        <Box sx={{ flexGrow: 1,m:4 }}>
-            <Grid container spacing={2}>
-                <Grid item xs={4}>
+        <Box>
+            <Grid container direction={'row'} spacing={2}>
+                <Grid item xs={12} sm={4} >
                     <ProgramFS />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <ProgramBS />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <ProgramDM />
                 </Grid>
             </Grid>
