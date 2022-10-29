@@ -20,18 +20,19 @@ const ContactForm = ({ addReferalProp }) => {
 
     }
 
-    const addReferal = _ => {
+    const addReferal = () => {
+        
         addReferalProp({
 
             id: (new Date).getTime(),
             name, email, phone
 
         })
-
+    }
         setName('');
         setEmail('');
         setPhone('');
-    }
+    
 
    const  handleSubmit = e =>{
         e.preventDefault();

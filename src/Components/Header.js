@@ -1,6 +1,5 @@
-import  React,{useState} from 'react';
-import { Avatar,styled, alpha, AppBar, Box, Toolbar, IconButton, Typography, InputBase, InputLabel, Badge, MenuItem, Menu, Link, FormControl, Select } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import  React from 'react';
+import { styled, alpha, AppBar, Box, Toolbar, IconButton,  InputBase, InputLabel, Badge, Link, FormControl, Select } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';

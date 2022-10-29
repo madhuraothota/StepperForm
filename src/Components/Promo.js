@@ -1,20 +1,10 @@
 import React from "react";
-import { Button, Box,  Grid, Typography } from '@mui/material';
+import { Box,  Grid } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import ContentCopyOutlinedIcon from '@mui/icons-material/ContentCopyOutlined';
-import { TextFields } from "@mui/icons-material";
 
-
-
-
-const action = (
-    <Button color="secondary" size="small">
-        <ContentCopyOutlinedIcon />
-    </Button>
-);
 
 
 const Promo = () => {

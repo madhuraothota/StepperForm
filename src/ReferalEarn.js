@@ -1,9 +1,11 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Grid, Paper, Typography, Button } from '@mui/material';
-import { orange } from '@mui/material/colors';
+import { useNavigate } from 'react-router-dom';
+
 
 const MyReferalButton = styled(Button)({
+    
     boxShadow: 'none',
     textTransform: 'none',
     fontSize: 16,
@@ -34,7 +36,14 @@ const MyReferalButton = styled(Button)({
 
 
 
-const ReferalEarn = () => {
+const ReferalEarn = (props) => {
+
+    const navigate = useNavigate();
+    
+    const goToReferalContact = () => {
+        navigate('/ReferalContacts');
+    }
+   
 
     
     return (
@@ -44,8 +53,8 @@ const ReferalEarn = () => {
                 margin: 10,
                 maxWidth: 1200,
                 flexGrow: 1,
-                backgroundColor:'#DFF6FF'
-                
+                backgroundColor: '#DFF6FF'
+
             }}
         >
             <Grid container spacing={2}>
@@ -61,14 +70,16 @@ const ReferalEarn = () => {
                         </Grid>
                     </Grid>
                     <Grid item>
-                        <MyReferalButton variant="contained" disableRipple>                       
-                            My Referals                           
-                        </MyReferalButton>
-
+                       
+                            <MyReferalButton variant="contained" disableRipple onClick={() => goToReferalContact()}>
+                            MyReferal
+                            </MyReferalButton>
+                        
                     </Grid>
                 </Grid>
             </Grid>
         </Paper>
+
     );
 }
 

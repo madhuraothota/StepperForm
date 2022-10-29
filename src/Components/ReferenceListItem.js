@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Grid, TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Paper, TextField, Typography } from '@mui/material';
+import { TableContainer, Table, TableBody, TableRow, TableCell } from '@mui/material';
 
  const ReferenceListItem = ({item,deleteReferalProp}) => {
 
@@ -7,13 +7,15 @@ import { Box, Button, Grid, TableContainer, Table, TableHead, TableBody, TableRo
 
     
   return (
-    <TableContainer component='Paper'>
-        <Table aria-aria-label='simple table'>
+    <TableContainer>
+        <Table >
         <TableBody>
+        <TableRow>
         <TableCell >{item.name}</TableCell>
         <TableCell >{item.email}</TableCell>
         <TableCell >{item.phone}</TableCell>        
-        <TableCell ><input type="button" value="delete" onClick={deleteReferal}/></TableCell>        
+        <TableCell ><input type="button" value="delete" onClick={deleteReferal}/></TableCell> 
+        </TableRow>       
         </TableBody>
         </Table>
     </TableContainer>

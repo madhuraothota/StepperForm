@@ -6,9 +6,11 @@ const jsonData = []
 
 const ContactTable = () => {
     const [referalData, setReferalData] = useState(jsonData);
+    
 
    
     const addReferal = referal  => {
+       
     setReferalData([...referalData,referal]);
     
     }  
