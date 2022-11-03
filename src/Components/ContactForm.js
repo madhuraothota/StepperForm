@@ -24,7 +24,7 @@ const ContactForm = ({ addReferalProp }) => {
         
         addReferalProp({
 
-            id: (new Date).getTime(),
+            id: (new Date()).getTime(),
             name, email, phone
 
         })

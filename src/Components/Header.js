@@ -1,112 +1,48 @@
-import  React from 'react';
-import { styled, alpha, AppBar, Box, Toolbar, IconButton,  InputBase, InputLabel, Badge, Link, FormControl, Select } from '@mui/material';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import Logo from '../images/logo.png';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Form from "react-bootstrap/Form";
+import logo from "../images/logo.png";
+import * as icon from "react-bootstrap-icons";
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
-  },
-}));
-
-const Header = () => { 
-  
-
-    return (
-    <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static" sx={{ color: 'black',backgroundColor:'white'}}>
-        <Toolbar>
-          <Link href="/">
-            <Box
-              component="img"
-              sx={{ height: 54 }}
-              alt="Logo"
-              src={Logo}
-            />
-          </Link>
-          <Box sx={{ minWidth: 120 }}>
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Explore</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-            >
-            </Select>
-          </FormControl>
-          </Box>
-          <Box sx={{ flexGrow: 1 }} />
-          <Search>
-            <SearchIconWrapper>              
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={0} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton size="large" aria-label="show products list" color="inherit">
-              <Badge badgeContent={0} color="error">
-                <ShoppingCartOutlinedIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
+const Header = () => {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand>
+          <img
+            src={logo}
+            width="150"
+            height="70"
+            className="d-inline-block align-top"
+            alt="logo"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <NavDropdown title="Explore" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form.Control type="text" placeholder="Search" />
+          <icon.Bell size={24} />
+          <icon.Cart size={24} />
+          <icon.Person size={24} />
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-}
+};
 
 export default Header;

@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Box, Grid, MenuItem, FormControl, Select, Typography } from '@mui/material';
-import ContactTable from './ContactTable';
+import Referal from './Referal';
 import './SelectProgram.css';
 
 
 
 const SelectProgram = () => {
-  const [program, setProgram] = useState('');
+  const [program, setProgram] = useState(0);
   const [showhide, setShowhide] = useState(false);
 
   const handleChange = (event) => {
     const getProgram = event.target.value;
-    setShowhide(getProgram);
+    console.log(getProgram);
+    setShowhide(true);
     setProgram(getProgram);
 
   };
@@ -40,15 +41,15 @@ const SelectProgram = () => {
        
 
         {
-          showhide === 10 && true ? <ContactTable /> : " "
+          showhide && program === 10? <Referal /> : " "
 
         }
         {
-          showhide === 20 && true ? <ContactTable /> : " "
+          showhide  && program === 20 ? <Referal /> : " "
 
         }
         {
-          showhide === 30 && true ? <ContactTable /> : " "
+          showhide  && program === 30 ? <Referal /> : " "
 
         }
 

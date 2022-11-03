@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ContactForm from './ContactForm';
 import ReferenceListItem from './ReferenceListItem';
 
+
 const jsonData = []
 
 const ContactTable = () => {
@@ -28,7 +29,9 @@ const ContactTable = () => {
             {
                 referalData.map(referal => <ReferenceListItem key={referal.id} item={referal} deleteReferalProp = {deleteReferal}/>)
             }
+            
             <ContactForm addReferalProp = {addReferal}/>
+            
         </div>
     );
                   
