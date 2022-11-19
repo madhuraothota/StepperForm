@@ -17,13 +17,6 @@ const Home = () => {
       <Requirementform/>
       <Hiringcos/>
       <Ourservices/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       <Footer/>            
     </React.Fragment>
   );

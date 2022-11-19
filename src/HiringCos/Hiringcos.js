@@ -11,7 +11,7 @@ import accenture from '../images/accenture.png';
  const Hiringcos = () => {
   return (
     <div>
-      <h6 className='text-center'>Our Hiring Partners</h6>    
+      <h2 className='text-center m-5'>Our Hiring Partners</h2>    
 
     <Stack direction="horizontal" gap={2} className="col-md-5 mx-auto">
     

@@ -41,7 +41,7 @@ const Header = () => {
           <Form.Control
             type="text"
             placeholder="Search"
-            className="class-search"
+            className="class-search mx-4"
           />
         </Navbar.Collapse>
         <Navbar.Brand>
@@ -54,7 +54,7 @@ const Header = () => {
           />
         </Navbar.Brand>
         <icon.Cart size={24} className="class-icons" />
-        <Button variant="outline-secondary">Login</Button>
+        <Button variant="outline-secondary mx-4">Login</Button>
         <Button variant="warning">Free Signup</Button>        
       </Container>
     </Navbar>
